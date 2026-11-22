@@ -1,3 +1,5 @@
+#Presentado por Neider Tobar
+#Programacion
 """Software FJ - Sistema Integral de Gestión de Clientes, Servicios y Reservas.
 
 POO + manejo avanzado de excepciones, sin base de datos.
