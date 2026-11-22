@@ -1,33 +1,38 @@
-"""Excepciones personalizadas de Software FJ."""
+"""Excepciones personalizadas de Software FJ.
+
+Todas heredan de SoftwareFJError, de modo que el sistema puede capturar
+cualquier error propio con un único `except SoftwareFJError`, o bien
+reaccionar de forma distinta según el tipo concreto de falla.
+"""
 
 
 class SoftwareFJError(Exception):
-    """Excepción base del sistema. Todas las demás heredan de ella."""
+    """Excepción base del sistema; de ella derivan todas las demás."""
 
 
 class ParametroFaltanteError(SoftwareFJError):
-    """Falta un parámetro obligatorio."""
+    """Se omitió un parámetro obligatorio al crear un objeto."""
 
 
 class ClienteInvalidoError(SoftwareFJError):
-    """Datos de cliente inválidos."""
+    """Algún dato personal del cliente no cumple las reglas de validación."""
 
 
 class ServicioInvalidoError(SoftwareFJError):
-    """Parámetros de servicio inválidos."""
+    """Los parámetros de un servicio (tarifa, capacidad, duración...) son inválidos."""
 
 
 class ServicioNoDisponibleError(SoftwareFJError):
-    """El servicio no está disponible para reservar."""
+    """Se intentó reservar un servicio marcado como no disponible."""
 
 
 class ReservaInvalidaError(SoftwareFJError):
-    """La reserva no pudo crearse o procesarse correctamente."""
+    """La reserva no pudo crearse o procesarse (suele encadenar la causa original)."""
 
 
 class OperacionNoPermitidaError(SoftwareFJError):
-    """Transición de estado u operación no permitida."""
+    """Se solicitó un cambio de estado que el ciclo de vida de la reserva no permite."""
 
 
 class CalculoInconsistenteError(SoftwareFJError):
-    """El cálculo de costos produjo un resultado inconsistente."""
+    """Un cálculo de costos recibió valores fuera de rango o produjo un resultado absurdo."""

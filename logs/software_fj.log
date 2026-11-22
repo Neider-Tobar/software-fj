@@ -1,64 +1,33 @@
-2026-11-21 10:20:45,697 | INFO     | === INICIO DE SIMULACIÓN SOFTWARE FJ ===
-2026-11-21 10:20:45,698 | INFO     | Registrar cliente OK
-2026-11-21 10:20:45,698 | ERROR    | Registrar cliente FALLÓ [ClienteInvalidoError]: Documento inválido (6-12 dígitos): 'abc'
-2026-11-21 10:20:45,698 | ERROR    | Registrar cliente FALLÓ [ParametroFaltanteError]: Faltan parámetros del cliente: email, telefono
-2026-11-21 10:20:45,698 | INFO     | Registrar cliente OK
-2026-11-21 10:20:45,698 | INFO     | Crear servicio ReservaSala OK
-2026-11-21 10:20:45,698 | INFO     | Crear servicio AlquilerEquipo OK
-2026-11-21 10:20:45,698 | INFO     | Crear servicio Asesoria OK
-2026-11-21 10:20:45,698 | ERROR    | Crear servicio Asesoria FALLÓ [ServicioInvalidoError]: Tarifa base inválida: -5
-2026-11-21 10:20:45,698 | ERROR    | Crear servicio ReservaSala FALLÓ [ServicioInvalidoError]: Capacidad inválida (1-200): 5000
-2026-11-21 10:20:45,698 | INFO     | Crear servicio AlquilerEquipo OK
-2026-11-21 10:20:45,698 | INFO     | Crear reserva OK
-2026-11-21 10:20:45,698 | INFO     | Crear reserva OK
-2026-11-21 10:20:45,698 | ERROR    | Crear reserva FALLÓ [ReservaInvalidaError]: Duración inválida para la reserva: Una sala se reserva entre 1 y 12 horas (recibido: 40) | causa: ServicioInvalidoError('Una sala se reserva entre 1 y 12 horas (recibido: 40)')
-2026-11-21 10:20:45,698 | ERROR    | Crear reserva FALLÓ [ServicioNoDisponibleError]: El servicio 'Proyector 4K' no está disponible
-2026-11-21 10:20:45,698 | ERROR    | Crear reserva FALLÓ [ReservaInvalidaError]: La reserva requiere un Cliente válido
-2026-11-21 10:20:45,698 | INFO     | Crear reserva OK
-2026-11-21 10:20:45,698 | ERROR    | Procesar reserva sin confirmar FALLÓ [OperacionNoPermitidaError]: Solo se procesan reservas CONFIRMADAS (estado: PENDIENTE)
-2026-11-21 10:20:45,698 | INFO     | Reserva #11 confirmada
-2026-11-21 10:20:45,698 | INFO     | Confirmar reserva 1 OK
-2026-11-21 10:20:45,698 | INFO     | Reserva #11 procesada. Total: $182,070.00
-2026-11-21 10:20:45,698 | INFO     | Intento de procesamiento finalizado para reserva #11 (estado: PROCESADA)
-2026-11-21 10:20:45,698 | INFO     | Procesar reserva 1 (10% desc.) OK
-2026-11-21 10:20:45,698 | ERROR    | Cancelar reserva ya procesada FALLÓ [OperacionNoPermitidaError]: No se puede cancelar una reserva en estado PROCESADA
-2026-11-21 10:20:45,698 | INFO     | Reserva #12 confirmada
-2026-11-21 10:20:45,698 | INFO     | Confirmar reserva 2 OK
-2026-11-21 10:20:45,698 | INFO     | Intento de procesamiento finalizado para reserva #12 (estado: CONFIRMADA)
-2026-11-21 10:20:45,698 | ERROR    | Procesar reserva 2 con descuento absurdo FALLÓ [ReservaInvalidaError]: No se pudo procesar la reserva #12 | causa: CalculoInconsistenteError('Descuento fuera de rango [0,1): 1.5')
-2026-11-21 10:20:45,698 | INFO     | Reserva #16 cancelada
-2026-11-21 10:20:45,698 | INFO     | Cancelar reserva 3 OK
-2026-11-21 10:20:45,698 | ERROR    | Confirmar reserva 3 cancelada FALLÓ [OperacionNoPermitidaError]: No se puede confirmar una reserva en estado CANCELADA
-2026-11-21 10:20:45,698 | INFO     | === FIN DE SIMULACIÓN: la aplicación continuó estable ===
-2026-11-21 21:02:50,581 | INFO     | === INICIO DE SIMULACIÓN SOFTWARE FJ ===
-2026-11-21 21:02:50,584 | INFO     | Registrar cliente OK
-2026-11-21 21:02:50,585 | ERROR    | Registrar cliente FALLÓ [ClienteInvalidoError]: Documento inválido (6-12 dígitos): 'abc'
-2026-11-21 21:02:50,589 | ERROR    | Registrar cliente FALLÓ [ParametroFaltanteError]: Faltan parámetros del cliente: email, telefono
-2026-11-21 21:02:50,591 | INFO     | Registrar cliente OK
-2026-11-21 21:02:50,592 | INFO     | Crear servicio ReservaSala OK
-2026-11-21 21:02:50,592 | INFO     | Crear servicio AlquilerEquipo OK
-2026-11-21 21:02:50,605 | INFO     | Crear servicio Asesoria OK
-2026-11-21 21:02:50,607 | ERROR    | Crear servicio Asesoria FALLÓ [ServicioInvalidoError]: Tarifa base inválida: -5
-2026-11-21 21:02:50,609 | ERROR    | Crear servicio ReservaSala FALLÓ [ServicioInvalidoError]: Capacidad inválida (1-200): 5000
-2026-11-21 21:02:50,612 | INFO     | Crear servicio AlquilerEquipo OK
-2026-11-21 21:02:50,620 | INFO     | Crear reserva OK
-2026-11-21 21:02:50,622 | INFO     | Crear reserva OK
-2026-11-21 21:02:50,623 | ERROR    | Crear reserva FALLÓ [ReservaInvalidaError]: Duración inválida para la reserva: Una sala se reserva entre 1 y 12 horas (recibido: 40) | causa: ServicioInvalidoError('Una sala se reserva entre 1 y 12 horas (recibido: 40)')
-2026-11-21 21:02:50,624 | ERROR    | Crear reserva FALLÓ [ServicioNoDisponibleError]: El servicio 'Proyector 4K' no está disponible
-2026-11-21 21:02:50,624 | ERROR    | Crear reserva FALLÓ [ReservaInvalidaError]: La reserva requiere un Cliente válido
-2026-11-21 21:02:50,625 | INFO     | Crear reserva OK
-2026-11-21 21:02:50,626 | ERROR    | Procesar reserva sin confirmar FALLÓ [OperacionNoPermitidaError]: Solo se procesan reservas CONFIRMADAS (estado: PENDIENTE)
-2026-11-21 21:02:50,626 | INFO     | Reserva #11 confirmada
-2026-11-21 21:02:50,626 | INFO     | Confirmar reserva 1 OK
-2026-11-21 21:02:50,627 | INFO     | Reserva #11 procesada. Total: $182,070.00
-2026-11-21 21:02:50,627 | INFO     | Intento de procesamiento finalizado para reserva #11 (estado: PROCESADA)
-2026-11-21 21:02:50,627 | INFO     | Procesar reserva 1 (10% desc.) OK
-2026-11-21 21:02:50,628 | ERROR    | Cancelar reserva ya procesada FALLÓ [OperacionNoPermitidaError]: No se puede cancelar una reserva en estado PROCESADA
-2026-11-21 21:02:50,628 | INFO     | Reserva #12 confirmada
-2026-11-21 21:02:50,629 | INFO     | Confirmar reserva 2 OK
-2026-11-21 21:02:50,629 | INFO     | Intento de procesamiento finalizado para reserva #12 (estado: CONFIRMADA)
-2026-11-21 21:02:50,629 | ERROR    | Procesar reserva 2 con descuento absurdo FALLÓ [ReservaInvalidaError]: No se pudo procesar la reserva #12 | causa: CalculoInconsistenteError('Descuento fuera de rango [0,1): 1.5')
-2026-11-21 21:02:50,630 | INFO     | Reserva #16 cancelada
-2026-11-21 21:02:50,630 | INFO     | Cancelar reserva 3 OK
-2026-11-21 21:02:50,634 | ERROR    | Confirmar reserva 3 cancelada FALLÓ [OperacionNoPermitidaError]: No se puede confirmar una reserva en estado CANCELADA
-2026-11-21 21:02:50,643 | INFO     | === FIN DE SIMULACIÓN: la aplicación continuó estable ===
+2026-11-21 21:31:04,005 | INFO     | === INICIO DE SIMULACIÓN SOFTWARE FJ ===
+2026-11-21 21:31:04,011 | INFO     | Registrar cliente OK
+2026-11-21 21:31:04,013 | ERROR    | Registrar cliente FALLÓ [ClienteInvalidoError]: Documento inválido (6-12 dígitos): 'abc'
+2026-11-21 21:31:04,014 | ERROR    | Registrar cliente FALLÓ [ParametroFaltanteError]: Faltan parámetros del cliente: email, telefono
+2026-11-21 21:31:04,016 | INFO     | Registrar cliente OK
+2026-11-21 21:31:04,018 | INFO     | Crear servicio ReservaSala OK
+2026-11-21 21:31:04,019 | INFO     | Crear servicio AlquilerEquipo OK
+2026-11-21 21:31:04,021 | INFO     | Crear servicio Asesoria OK
+2026-11-21 21:31:04,021 | ERROR    | Crear servicio Asesoria FALLÓ [ServicioInvalidoError]: Tarifa base inválida: -5
+2026-11-21 21:31:04,022 | ERROR    | Crear servicio ReservaSala FALLÓ [ServicioInvalidoError]: Capacidad inválida (1-200): 5000
+2026-11-21 21:31:04,024 | INFO     | Crear servicio AlquilerEquipo OK
+2026-11-21 21:31:04,037 | INFO     | Crear reserva OK
+2026-11-21 21:31:04,038 | INFO     | Crear reserva OK
+2026-11-21 21:31:04,039 | ERROR    | Crear reserva FALLÓ [ReservaInvalidaError]: Duración inválida para la reserva: Una sala se reserva entre 1 y 12 horas (recibido: 40) | causa: ServicioInvalidoError('Una sala se reserva entre 1 y 12 horas (recibido: 40)')
+2026-11-21 21:31:04,041 | ERROR    | Crear reserva FALLÓ [ServicioNoDisponibleError]: El servicio 'Proyector 4K' no está disponible
+2026-11-21 21:31:04,041 | ERROR    | Crear reserva FALLÓ [ReservaInvalidaError]: La reserva requiere un Cliente válido
+2026-11-21 21:31:04,041 | INFO     | Crear reserva OK
+2026-11-21 21:31:04,058 | ERROR    | Procesar reserva FALLÓ [OperacionNoPermitidaError]: Solo se procesan reservas CONFIRMADAS (estado: PENDIENTE)
+2026-11-21 21:31:04,061 | INFO     | Reserva #1 confirmada
+2026-11-21 21:31:04,063 | INFO     | Confirmar reserva OK
+2026-11-21 21:31:04,063 | INFO     | Reserva #1 procesada. Total: $182,070.00
+2026-11-21 21:31:04,064 | INFO     | Intento de procesamiento finalizado para reserva #1 (estado: PROCESADA)
+2026-11-21 21:31:04,065 | INFO     | Procesar reserva OK
+2026-11-21 21:31:04,065 | ERROR    | Cancelar reserva FALLÓ [OperacionNoPermitidaError]: No se puede cancelar una reserva en estado PROCESADA
+2026-11-21 21:31:04,066 | INFO     | Reserva #2 confirmada
+2026-11-21 21:31:04,066 | INFO     | Confirmar reserva OK
+2026-11-21 21:31:04,066 | INFO     | Intento de procesamiento finalizado para reserva #2 (estado: CONFIRMADA)
+2026-11-21 21:31:04,067 | ERROR    | Procesar reserva FALLÓ [ReservaInvalidaError]: No se pudo procesar la reserva #2 | causa: CalculoInconsistenteError('Descuento fuera de rango [0,1): 1.5')
+2026-11-21 21:31:04,067 | INFO     | Reserva #3 cancelada
+2026-11-21 21:31:04,067 | INFO     | Cancelar reserva OK
+2026-11-21 21:31:04,068 | ERROR    | Confirmar reserva FALLÓ [OperacionNoPermitidaError]: No se puede confirmar una reserva en estado CANCELADA
+2026-11-21 21:31:04,069 | ERROR    | Confirmar reserva FALLÓ [ReservaInvalidaError]: No hay una reserva válida para confirmar
+2026-11-21 21:31:04,072 | INFO     | === FIN DE SIMULACIÓN: Clientes: 2 | Servicios: 4 | Reservas: 3 | Operaciones OK: 13 | Fallidas: 12 ===
